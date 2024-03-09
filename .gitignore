@@ -1,0 +1,6 @@
+.DS_Store
+.system/
+data/
+log/
+secrets/
+.env
