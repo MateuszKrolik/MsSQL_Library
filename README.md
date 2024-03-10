@@ -98,7 +98,7 @@ For ARM MacOS you can also pull Azure SQL Edge Image from DockerHub(as I did).
     ```
 3. Later in AzureDataStudio in server field enter:
     ```
-    server=localhost,1433
+    localhost,1433
     ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
