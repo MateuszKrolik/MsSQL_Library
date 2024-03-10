@@ -14,10 +14,9 @@
     <img src="images/logo.svg" alt="Logo" width="160" height="160">
   </a>
 
-<h3 align="center">MsSQL Library</h3>
+<h3 align="center">Library DataBase</h3>
 
   <p align="center">
-    project_description
     <br />
     <a href="https://github.com/MateuszKrolik/MsSQL_Library"><strong>Explore the docs »</strong></a>
     <br />
@@ -83,17 +82,25 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 For starters i recommend having Ms-SQL-Server Express installed.
 
-For MacOS you can also pull Azure SQL Edge Image from DockerHub(as I did).
+For Smooth Editing Experience on an ARM Mac, I also recommend having DockerDesktop and Azure Data Studio.
 
 ### Prerequisites
 
-For Smooth Editing Experience on a Mac, I also recommend having Azure Data Studio.
+For ARM MacOS you can also pull Azure SQL Edge Image from DockerHub(as I did).
 
 ### Installation
 
 1. Clone the repo
     ```sh
     git clone https://github.com/MateuszKrolik/MsSQL_Library.git
+    ```
+2. Run the Azure SQL-Edge Image using Docker and create a volume to store host(ARM MacOS):
+    ```sh
+    sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=<YourStrongPassword>' -e 'MSSQL_PID=Developer' -p 1433:1433 -v /Users/<yourUserName>/<yourCatalog>/<yourDirectory>:/var/opt/mssql --name azuresqledge -d mcr.microsoft.com/azure-sql-edge
+    ```
+3. Later in AzureDataStudio in server field enter:
+    ```
+    server=localhost,1433
     ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -114,7 +121,7 @@ _For more examples, please refer to the [Documentation](https://github.com/Mateu
 -   [x] Data Indexing
 -   [x] Junction Tables for handling Many-to-Many RelationShips
 -   [x] Auto Incrementing Primary-Keys
--   [x] Unique E-mails
+-   [x] DockerVolume to Store Database Dumps
 
 See the [open issues](https://github.com/MateuszKrolik/MsSQL_Library/issues) for a full list of proposed features (and known issues).
 

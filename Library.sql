@@ -27,7 +27,7 @@
 -- 1 Table for authors
 CREATE TABLE Authors (
     AuthorID INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(30) NOT NULL,
+    Name NVARCHAR(30) NOT NULL UNIQUE,
     Bio TEXT
 );
 CREATE INDEX idx_authors_name ON Authors(Name);
@@ -35,17 +35,17 @@ CREATE INDEX idx_authors_name ON Authors(Name);
 -- 2 Table for users
 CREATE TABLE Users (
     UserID INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(30) NOT NULL,
+    Name NVARCHAR(30) NOT NULL UNIQUE,
     Email NVARCHAR(30) UNIQUE,
-    Phone NVARCHAR(30)
+    Phone NVARCHAR(30) UNIQUE,
 );
 CREATE INDEX idx_users_name ON Users(Name);
 
 -- 3 Table for books
 CREATE TABLE Books (
     BookID INT PRIMARY KEY IDENTITY(1,1),
-    Title NVARCHAR(30) NOT NULL,
-    ISBN NVARCHAR(13), -- International Standard Book Number, 13 digits
+    Title NVARCHAR(30) NOT NULL UNIQUE,
+    ISBN NVARCHAR(13) UNIQUE, -- International Standard Book Number, 13 digits
     PublicationYear INT
 );
 CREATE INDEX idx_books_title ON Books(Title);
