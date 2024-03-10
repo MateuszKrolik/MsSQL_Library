@@ -61,8 +61,6 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/MateuszKrolik/MsSQL_Library)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `MateuszKrolik`, `MsSQL_Library`, `twitter_handle`, `mateusz-królik-8b1862262`, `mateuszkrolik87@gmail.com`, `email`, `MsSQL Library`, `project_description`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
