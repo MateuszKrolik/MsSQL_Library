@@ -112,7 +112,7 @@ _For more examples, please refer to the [Documentation](https://github.com/Mateu
 
 -   [x] Data Normalization
 -   [x] Data Indexing
--   [x] Avoiding Many-to-Many RelationShips
+-   [x] Junction Tables for handling Many-to-Many RelationShips
 -   [x] Auto Incrementing Primary-Keys
 -   [x] Unique E-mails
 
